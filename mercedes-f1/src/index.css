@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@400..900&family=Instrument+Serif:ital@0;1&family=Inter+Tight:ital,wght@0,100..900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+    --color-mercedes-primary: #00A19C;
+    --color-mercedes-accent: #80142B;
+    --color-mercedes-light: #C6C6C6;
+    --color-mercedes-dark: #111111;
+    --color-mercedes-card: #1a1a1a;
+
+    --text-mercedes-primary: #00A19C;
+    --text-mercedes-accent: #80142B;
+    --text-mercedes-light: #C6C6C6;
+    --text-mercedes-bright: #E8E8E8;
+
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-body: 'Inter Tight', sans-serif;
+    --font-fancy: 'Instrument Serif', serif;
+    --font-tech: 'Orbitron', sans-serif;
+}
+
+body {
+    background-color: #111111;
+    color: #E8E8E8;
+    font-family: 'Inter Tight', "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+
+}
+
+.track-path-animated {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+}
+
+@keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes logospin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+}
+
+.animated-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: 
+        linear-gradient(rgba(131, 131, 131, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(131, 131, 131, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridMove 15s linear infinite;
+}
+
+@keyframes gridMove {
+    0% { background-position: 0 0; }
+    100% { background-position: 50px 50px; }
+}
